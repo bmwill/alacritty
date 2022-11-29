@@ -58,7 +58,7 @@ pub struct WindowConfig {
     /// Initial dimensions.
     dimensions: Dimensions,
 
-    pub option_as_alt: bool,
+    pub option_alternative_input: bool,
 }
 
 impl Default for WindowConfig {
@@ -76,7 +76,7 @@ impl Default for WindowConfig {
             opacity: Default::default(),
             padding: Default::default(),
             dimensions: Default::default(),
-            option_as_alt: Default::default(),
+            option_alternative_input: Default::default(),
         }
     }
 }
