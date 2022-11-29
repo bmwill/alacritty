@@ -330,7 +330,8 @@ impl Window {
             .with_visible(false)
             .with_transparent(true)
             .with_maximized(window_config.maximized())
-            .with_fullscreen(window_config.fullscreen());
+            .with_fullscreen(window_config.fullscreen())
+            .with_option_as_alt(window_config.option_as_alt);
 
         match window_config.decorations {
             Decorations::Full => window,
