@@ -166,7 +166,7 @@ impl Window {
         window.set_cursor_icon(current_mouse_cursor);
 
         // Enable IME.
-        window.set_ime_allowed(true);
+        window.set_ime_allowed(false);
 
         #[cfg(all(feature = "x11", not(any(target_os = "macos", windows))))]
         if !is_wayland {
@@ -331,7 +331,7 @@ impl Window {
             .with_transparent(true)
             .with_maximized(window_config.maximized())
             .with_fullscreen(window_config.fullscreen())
-            .with_option_alternative_input(window_config.option_alternative_input);
+            .with_option_as_alt(window_config.option_as_alt);
 
         match window_config.decorations {
             Decorations::Full => window,
